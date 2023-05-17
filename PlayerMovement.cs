@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         Rotate();
         ControlSpeed();
         if (!_isGrounded) 
-         Camera.main.transform.localEulerAngles = new Vector3(Mathf.Lerp(Camera.main.transform.localEulerAngles.x, Mathf.Clamp(_rigidbody.velocity.y * _jumpHeadImpact , 0, 700), .05f), Camera.main.transform.localEulerAngles.y, Camera.main.transform.localEulerAngles.z);
+         Camera.main.transform.localEulerAngles = new Vector3(Mathf.Lerp(Camera.main.transform.localEulerAngles.x, Mathf.Clamp(_rigidbody.velocity.y * _jumpHeadImpact , 0, 7), .05f), Camera.main.transform.localEulerAngles.y, Camera.main.transform.localEulerAngles.z);
         else
             Camera.main.transform.localEulerAngles = new Vector3(Mathf.Lerp(Camera.main.transform.localEulerAngles.x, 0, .05f), Camera.main.transform.localEulerAngles.y, Camera.main.transform.localEulerAngles.z);
     }
